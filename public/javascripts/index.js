@@ -52,7 +52,7 @@ $('#form_map').click(function(){
                 $('.weather__discription').text(data.weather[0].description);
                 $('#feels_like').text(data.main.feels_like);
                 $('#pressure').text(data.main.pressure);
-                $('#index').text(`${data.cod}`);
+                $('#index').text(`${data.sys.country}`);
                 changeBackground(data.weather[0].description);
             
             
