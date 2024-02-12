@@ -43,6 +43,7 @@ jsPDF is a JavaScript library that allows for generation of PDF documents direct
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.2.3/jspdf.plugin.autotable.min.js"></script>
 
+
 User examples for login purposes. Here they are:
 
 Main Admin:
