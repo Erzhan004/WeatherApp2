@@ -47,19 +47,19 @@ jsPDF is a JavaScript library that allows for generation of PDF documents direct
 User examples for login purposes. Here they are:
 
 Main Admin:
-Username: Erzhan
+Username: Erzhan,
 Password: admin001
 
 Admin created by the Main Admin:
-Username: TestAdmin
+Username: TestAdmin,
 Password: 161291
 
 Regular User:
-Username: TestUser
+Username: TestUser,
 Password: 161291
 
 User who has been deleted by the Admin:
-Username: TestDel
+Username: TestDel,
 Password: 161291
 
 
