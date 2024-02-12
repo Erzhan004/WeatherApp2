@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body >
+  <header>
+    <div class="logout-btn">
+        <a href="/" class="btn btn-danger"><i class='bx bx-log-out'></i> Logout</a>
+    </div>
+</header>
+    <div class="container" >
+        <div class="row">
+          <div class="input_city input-group">
+            <div><input type="text" name="city" class="form-control me-5" placeholder="Введите название города" aria-label="Recipient's username" aria-describedby="basic-addon2"></div>
+          <div><button class="btn btn-secondary ms-2" type="button" id="form_map">Найти </button>
+              <a href="/weatherHistory?username=<%= username %>" class="btn btn-secondary  " type="button" id="">История</a> </div>
+          </div>
+          <div class="col-md-3">
+            <div class="weather" >
+              <div class="weather__info none" >
+                    <img src="http://openweathermap.org/img/w/01n.png" alt="Weather" class="weather__img">
+                    <div class="weather__temp">--</div>
+                    <div class="weather__city">--</div>
+                    <div class="weather__discription" name ="discription" >--</div>
+                </div>
+              
+              <section class="weather__details none">
+                  <section class="details">
+                      
+                      <i class="details__img bi bi-droplet"></i>
+                      <div class="details__value" id="humidity">50 %</div>
+                      <div class="details__title">Humidity</div>
+                  </section>
+      
+                  <section class="details">
+                   
+                      <i class="details__img bi bi-wind"></i>
+                      <div class="details__value" id="speed">10 м/с</div>
+                      <div class="details__title">Wind Speed</div>
+                  </section>
+                  
+              </section>
+
+              <section class="weather__details none">
+                <section class="details">
+    
+                    <i class="details__img bi bi-thermometer-snow"></i>
+                    <div class="details__value" id="feels_like">25 &deg C</div>
+                    <div class="details__title">Feels Like</div>
+                </section>
+    
+                <section class="details">
+                  
+                  <i class="details__img bi bi-speedometer"></i>
+                    <div class="details__value" id="pressure">5 hPa</div>
+                    <div class="details__title">Pressure</div>
+                </section>
+                
+            </section>
+            <section class="weather__details none">
+              <section class="details">
+              
+                  <i class="details__img bi bi-cloud-drizzle"></i>
+                  <div class="details__value" id="rain3h">0 mm</div>
+                  <div class="details__title">Rain 3h</div>
+              </section>
+  
+              <section class="details">
+               
+                <i class="details__img bi bi-globe"></i>
+                  <div class="details__value" id="index">200</div>
+                  <div class="details__title">Index</div>
+              </section>
+              
+          </section>
+            </div>
+          </div>
+          <div class="col-md-9 mt-3">
+            <div id="map"></div>
+          </div>
+
+        </div>
+
+        </div>
+        <footer class="m-0 p-0 " >
+          <div class="text-center p-1 d-flex justify-content-center" style="background-color: rgba(65, 68, 69, 0.384);">
+            <p id="username" class="m-0 me-3"> User: <%=username%></p>
+            <p class="m-0 ">Erzhan Kabdolla Se-2201</p>
+          </div>
+        </footer>
+
+          <script src="https://api-maps.yandex.ru/2.1/?apikey=e893ba67-1128-425b-ba83-a5a6be13872d&lang=ru_RU"></script>
+          <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+          <script src="/javascripts/index.js"></script>
+</body>
+</html>
